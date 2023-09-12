@@ -1,6 +1,6 @@
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-import { useGlobalStates } from '../Components/utils/global.context.jsx';
+import { useGlobalStates } from '../Context/Context.jsx';
 import Card from '../Components/Card.jsx';
 
 const Home = () => {

@@ -2,11 +2,11 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-export const initialState = { isDark: false, data: [] };
+const initialState = { isDark: false, data: [] };
 
 export const GlobalStates = createContext(initialState);
 
-const GlobalContext = ({ children }) => {
+const Context = ({ children }) => {
     const [isDark, setIsDark] = useState(false);
     const [data, setData] = useState([]);
 
@@ -15,7 +15,6 @@ const GlobalContext = ({ children }) => {
         (async () => {
             try {
                 const response = await axios(URI);
-                console.log(response.data);
                 setData(response.data);
             } catch (error) {
                 console.log(error);
@@ -30,10 +29,10 @@ const GlobalContext = ({ children }) => {
     );
 };
 
-GlobalContext.propTypes = {
+Context.propTypes = {
     children: PropTypes.any,
 };
 
-export default GlobalContext;
+export default Context;
 
 export const useGlobalStates = () => useContext(GlobalStates);
