@@ -9,14 +9,8 @@ const Home = () => {
         <main className="">
             <h1>Home</h1>
             <div className="card-grid">
-                {/* Aqui deberias renderizar las cards */}
                 {data.map((dentist) => (
-                    <Card
-                        name={dentist.name}
-                        username={dentist.username}
-                        id={dentist.id}
-                        key={dentist.id}
-                    />
+                    <Card dentist={dentist} key={dentist.id} />
                 ))}
             </div>
         </main>

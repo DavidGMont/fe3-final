@@ -1,20 +1,24 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { useGlobalStates } from '../Context/Context.jsx';
 
-const Card = ({ name, username, id }) => {
-    const addFav = () => {
-        // Aqui iria la logica para agregar la Card en el localStorage
-    };
+const Card = ({ dentist }) => {
+    const { favorites, setFavorites } = useGlobalStates();
+
+    const handleClick = () => setFavorites([...favorites, dentist]);
 
     return (
         <div className="card">
             {/* En cada card deberán mostrar en name - username y el id */}
-            <p>{name}</p>
-            <p>{username}</p>
-            <p>{id}</p>
+            <Link to={`/dentist/${dentist.id}`}>
+                <p>{dentist.name}</p>
+                <p>{dentist.username}</p>
+                <p>{dentist.id}</p>
+            </Link>
             {/* No debes olvidar que la Card a su vez servirá como Link hacia la pagina de detalle */}
 
             {/* Además, deberán integrar la lógica para guardar cada Card en el localStorage */}
-            <button onClick={addFav} className="favButton">
+            <button onClick={handleClick} className="favButton">
                 Add fav
             </button>
         </div>
@@ -22,9 +26,7 @@ const Card = ({ name, username, id }) => {
 };
 
 Card.propTypes = {
-    name: PropTypes.string,
-    username: PropTypes.string,
-    id: PropTypes.number,
+    dentist: PropTypes.object,
 };
 
 export default Card;
