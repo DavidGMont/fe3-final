@@ -6,6 +6,8 @@ const initialState = { isDark: false, data: [] };
 
 export const GlobalStates = createContext(initialState);
 
+export const URI = 'https://jsonplaceholder.typicode.com/users';
+
 const getFavoritesFromLocalStorage = JSON.parse(localStorage.getItem('favorites'));
 const favoritesInitialState = getFavoritesFromLocalStorage ?? [];
 
@@ -14,7 +16,6 @@ const Context = ({ children }) => {
     const [data, setData] = useState([]);
     const [favorites, setFavorites] = useState(favoritesInitialState);
 
-    const URI = 'https://jsonplaceholder.typicode.com/users';
     useEffect(() => {
         (async () => {
             try {
@@ -31,7 +32,8 @@ const Context = ({ children }) => {
     }, [favorites]);
 
     return (
-        <GlobalStates.Provider value={{ isDark, data, setIsDark, favorites, setFavorites }}>
+        <GlobalStates.Provider
+            value={{ isDark, data, favorites, setIsDark, setData, setFavorites }}>
             {children}
         </GlobalStates.Provider>
     );
