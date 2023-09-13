@@ -60,7 +60,9 @@ TBD.
 
 ### Recursos útiles
 
-TBD.
+- [Creando y probando RegEx](https://regex101.com/).
+- [Referencia de patrones RegEx](https://www.regular-expressions.info/refquick.html).
+- [¿Cómo importar un Paquete de JavaScript de un CDN en React?](https://stackoverflow.com/questions/44877904/how-do-you-import-a-javascript-package-from-a-cdn-script-tag-in-react)
 
 ## 🙌 Agradecimientos
 
