@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-// eslint-disable-next-line no-unused-vars
-const useConfetti = window.confetti;
+(() => window.confetti)();
+(() => window.tsParticles)();
 
 const Form = () => {
     const [contact, setContact] = useState({
@@ -13,7 +13,7 @@ const Form = () => {
         emailIsValid: false,
     });
 
-    const fullNameRegExp = /[a-z áéíóúñ'-]{5,30}/g;
+    const fullNameRegExp = /^[a-z áéíóúñ'-]{5,30}$/g;
     const emailRegExp = /[\w.-]{2,30}@[\w.-]{2,30}\.\w{2,4}(?:.\w{2,4})?/g;
 
     const handleBlur = () => {
