@@ -4,12 +4,12 @@ import { useGlobalStates } from '../Context/Context.jsx';
 import Card from '../Components/Card.jsx';
 
 const Home = () => {
-    const { data } = useGlobalStates();
+    const { state } = useGlobalStates();
     return (
         <main className="">
             <h1>Home</h1>
             <div className="card-grid">
-                {data.map((dentist) => (
+                {state.data.map((dentist) => (
                     <Card dentist={dentist} key={dentist.id} />
                 ))}
             </div>

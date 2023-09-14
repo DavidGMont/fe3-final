@@ -1,8 +1,13 @@
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 import { Link } from 'react-router-dom';
+import { useGlobalStates } from '../Context/Context.jsx';
 
 const Navbar = () => {
+    const { state, dispatch } = useGlobalStates();
+
+    const handleClick = () => dispatch({ type: 'TOGGLE_THEME', payload: state.isDark });
+
     return (
         <nav>
             {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
@@ -18,8 +23,8 @@ const Navbar = () => {
                     <Link to={'/favs'}>Favorites</Link>
                 </li>
             </ul>
-            <button title={'Toggle color theme'} type={'button'}>
-                Change theme
+            <button title="Toggle color theme" type="button" onClick={handleClick}>
+                Toggle {state.isDark ? 'Dark' : 'Light'}
             </button>
         </nav>
     );
