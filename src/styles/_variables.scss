@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --background-color: #f7f5ef;
+    --primary-focus-color: #f08559;
+    --secondary-focus-color: #19192b;
+    --primary-text-color: #000000;
+    --secondary-text-color: #26282e;
+}
+
+@font-face {
+    font-family: 'Andika-Regular';
+    src: url('src/assets/fonts/Andika-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Andika-Bold';
+    src: url('src/assets/fonts/Andika-Bold.ttf');
+}
+
+$background-color: var(--background-color);
+$primary-focus-color: var(--primary-focus-color);
+$secondary-focus-color: var(--secondary-focus-color);
+$primary-text-color: var(--primary-text-color);
+$secondary-text-color: var(--secondary-text-color);

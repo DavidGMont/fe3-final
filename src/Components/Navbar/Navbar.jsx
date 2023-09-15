@@ -1,7 +1,6 @@
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 import { Link } from 'react-router-dom';
-import { useGlobalStates } from '../Context/Context.jsx';
+import { useGlobalStates } from '../../Context/Context.jsx';
+import './Navbar.module.scss';
 
 const Navbar = () => {
     const { state, dispatch } = useGlobalStates();
@@ -10,8 +9,13 @@ const Navbar = () => {
 
     return (
         <nav>
-            {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-            {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
+            <Link to={'/'}>
+                <img
+                    src="/src/assets/img/dr-dparkling-logo.svg"
+                    alt="Dr. Sparkling\'s Dental Clinic Logo"
+                />
+            </Link>
+
             <ul>
                 <li>
                     <Link to={'/'}>Home</Link>
