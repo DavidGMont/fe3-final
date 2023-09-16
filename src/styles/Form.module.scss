@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+.contact {
+    max-width: 50%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+
+    > label {
+        text-align: left;
+        margin-bottom: 0.25rem;
+    }
+
+    > input {
+        font-style: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        appearance: none;
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid #adadad;
+        border-radius: 0.5rem;
+
+        &:focus-visible {
+            border-color: $primary-focus-color;
+        }
+    }
+
+    > button {
+        background-color: $primary-focus-color;
+        transition:
+            background-color 0.25s,
+            border-color 0.25s,
+            color 0.25s;
+        margin: 1.5rem 0 2rem;
+
+        &:disabled {
+            background-color: #888888;
+            color: $background-color;
+
+            &:hover {
+                border-color: #793737;
+                background-color: #793737;
+            }
+        }
+
+        &:hover {
+            border-color: #3e7937;
+            background-color: #3e7937;
+            color: $background-color;
+        }
+    }
+}

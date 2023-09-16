@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+.info {
+    display: flex;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    align-items: center;
+
+    > i {
+        font-size: 1.25rem;
+        margin-right: 1.5rem;
+    }
+
+    > p {
+        text-align: left;
+    }
+}

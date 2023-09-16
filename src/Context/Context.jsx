@@ -21,6 +21,15 @@ const initialState = {
     },
     favorites: favoritesInitialState,
     isDark: false,
+    contact: {
+        fullName: '',
+        email: '',
+        isFullNameValid: false,
+        isEmailValid: false,
+        showFullNameFeedback: false,
+        showEmailFeedback: false,
+        showSubmitFeedback: false,
+    },
 };
 
 const reducer = (state, action) => {
@@ -44,6 +53,56 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 isDark: !state.isDark,
+            };
+        case 'GET_CONTACT_FULL_NAME':
+            return {
+                ...state,
+                contact: { ...state.contact, fullName: action.payload },
+            };
+        case 'VALIDATE_CONTACT_FULL_NAME':
+            return {
+                ...state,
+                contact: {
+                    ...state.contact,
+                    isFullNameValid: action.payload,
+                },
+            };
+        case 'SHOW_CONTACT_FULL_NAME_FEEDBACK':
+            return {
+                ...state,
+                contact: {
+                    ...state.contact,
+                    showFullNameFeedback: state.contact.isFullNameValid === false,
+                },
+            };
+        case 'GET_CONTACT_EMAIL':
+            return {
+                ...state,
+                contact: { ...state.contact, email: action.payload },
+            };
+        case 'VALIDATE_CONTACT_EMAIL':
+            return {
+                ...state,
+                contact: {
+                    ...state.contact,
+                    isEmailValid: action.payload,
+                },
+            };
+        case 'SHOW_CONTACT_EMAIL_FEEDBACK':
+            return {
+                ...state,
+                contact: {
+                    ...state.contact,
+                    showEmailFeedback: state.contact.isEmailValid === false,
+                },
+            };
+        case 'SHOW_SUBMIT_FEEDBACK':
+            return {
+                ...state,
+                contact: {
+                    ...state.contact,
+                    showSubmitFeedback: action.payload,
+                },
             };
         default:
             throw new Error();
