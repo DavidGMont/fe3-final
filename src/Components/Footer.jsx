@@ -4,19 +4,6 @@ import styles from '../styles/Footer.module.scss';
 const Footer = () => {
     return (
         <>
-            <div className={styles.subscribe}>
-                <p>Subscribe to our newsletter to receive the best tips of the month!</p>
-                <form>
-                    <input
-                        type="email"
-                        placeholder="Your email here"
-                        aria-label="Type your email here"
-                    />
-                    <button type="button" aria-label="Submit email">
-                        <i className="fa-solid fa-check"></i>
-                    </button>
-                </form>
-            </div>
             <footer className={styles.footer}>
                 <div>
                     <Link to={'/'}>

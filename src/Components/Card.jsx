@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useGlobalStates } from '../Context/Context.jsx';
+import { pics } from '../utils/pics.js';
+import styles from '../styles/Card.module.scss';
 
 const Card = ({ dentist }) => {
     const { dispatch } = useGlobalStates();
@@ -8,20 +10,21 @@ const Card = ({ dentist }) => {
     const handleClick = () => dispatch({ type: 'ADD_FAVORITE', payload: dentist });
 
     return (
-        <div className="card">
-            {/* En cada card deberán mostrar en name - username y el id */}
+        <article className={styles.card}>
             <Link to={`/dentist/${dentist.id}`}>
-                <p>{dentist.name}</p>
+                <img src={pics[dentist.id].pic} alt={dentist.name} />
+                <h2>{dentist.name}</h2>
+                <p>Specialist in:</p>
+                <p>{pics[dentist.id].speciality}</p>
+                <p>
+                    <i className="fa-solid fa-award"></i> Top #{dentist.id}
+                </p>
                 <p>@{dentist.username.toLowerCase()}</p>
-                <p>{dentist.id}</p>
             </Link>
-            {/* No debes olvidar que la Card a su vez servirá como Link hacia la pagina de detalle */}
-
-            {/* Además, deberán integrar la lógica para guardar cada Card en el localStorage */}
-            <button onClick={handleClick} className="favButton">
-                Add fav
+            <button onClick={handleClick}>
+                <i className="fa-regular fa-star"></i>
             </button>
-        </div>
+        </article>
     );
 };
 

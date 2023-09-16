@@ -1,12 +1,10 @@
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 import { useParams } from 'react-router-dom';
 import { URI, useGlobalStates } from '../Context/Context.jsx';
 import { useEffect } from 'react';
+import { pics } from '../utils/pics.js';
 import axios from 'axios';
 
 const Detail = () => {
-    // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
     const { state, dispatch } = useGlobalStates();
     const { id } = useParams();
 
@@ -27,6 +25,7 @@ const Detail = () => {
             {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
             {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
             <h1>{state.dentist.name}</h1>
+            <img src={pics[id]} alt={state.dentist.name} />
             <p>📧 Email: {state.dentist.email}</p>
             <p>📞 Phone: {state.dentist.phone}</p>
             <p>
