@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useGlobalStates } from '../../Context/Context.jsx';
-import './Navbar.module.scss';
+import { useGlobalStates } from '../Context/Context.jsx';
+import styles from '../styles/Navbar.module.scss';
 
 const Navbar = () => {
     const { state, dispatch } = useGlobalStates();
@@ -8,7 +8,7 @@ const Navbar = () => {
     const handleClick = () => dispatch({ type: 'TOGGLE_THEME', payload: state.isDark });
 
     return (
-        <nav>
+        <nav className={styles.nav}>
             <Link to={'/'}>
                 <img
                     src="/src/assets/img/dr-dparkling-logo.svg"
