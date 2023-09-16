@@ -6,8 +6,17 @@ import Home from './Routes/Home.jsx';
 import Contact from './Routes/Contact.jsx';
 import Detail from './Routes/Detail.jsx';
 import Favs from './Routes/Favs.jsx';
+import { useGlobalStates } from './Context/Context.jsx';
+import { useEffect } from 'react';
 
 function App() {
+    const { state } = useGlobalStates();
+    const rootElement = document.documentElement;
+
+    useEffect(() => {
+        state.isDark ? rootElement.classList.add('dark') : rootElement.classList.remove('dark');
+    }, [rootElement.classList, state.isDark]);
+
     return (
         <>
             <Navbar />

@@ -13,6 +13,7 @@ const Navbar = () => {
                 <img
                     src="/src/assets/img/dr-dparkling-logo.svg"
                     alt="Dr. Sparkling\'s Dental Clinic Logo"
+                    style={state.isDark ? { filter: 'invert(100%)' } : { filter: 'none' }}
                 />
             </Link>
 

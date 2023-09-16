@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/Footer.module.scss';
+import { useGlobalStates } from '../Context/Context.jsx';
 
 const Footer = () => {
+    const { state } = useGlobalStates();
+
     return (
         <>
             <footer className={styles.footer}>
@@ -15,7 +18,7 @@ const Footer = () => {
                     <p>Proper Care, Happy Life</p>
                 </div>
                 <div className={styles.divisor}></div>
-                <nav>
+                <nav style={state.isDark ? { filter: 'invert(100%)' } : { filter: 'none' }}>
                     <ul>
                         <li>
                             <Link to={'/'}>Home</Link>
@@ -29,7 +32,7 @@ const Footer = () => {
                     </ul>
                 </nav>
                 <div className={styles.divisor}></div>
-                <nav>
+                <nav style={state.isDark ? { filter: 'invert(100%)' } : { filter: 'none' }}>
                     <p>Connect with us!</p>
                     <ul>
                         <li>

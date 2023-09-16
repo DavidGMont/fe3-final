@@ -28,7 +28,9 @@ const Card = ({ dentist }) => {
                 <p>@{dentist.username.toLowerCase()}</p>
             </Link>
             <button onClick={handleClick}>
-                <i className={favorite ? 'fa-solid fa-star' : 'fa-regular fa-star'}></i>
+                <i
+                    className={favorite ? 'fa-solid fa-star' : 'fa-regular fa-star'}
+                    style={state.isDark ? { filter: 'invert(100%)' } : { filter: 'none' }}></i>
             </button>
         </article>
     );

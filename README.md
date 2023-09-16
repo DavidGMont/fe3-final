@@ -35,7 +35,9 @@ Los usuarios de Dr. Sparkling's Dental Clinic deben ser capaces de:
 
 ### Sitio desplegado
 
-TBD.
+![](public/light.jpeg "Website on light mode")
+
+![](public/dark.jpeg "Website on dark mode")
 
 ## 🔨 Mi proceso
 
@@ -52,7 +54,7 @@ TBD.
 
 ### Lo que aprendí
 
-TBD.
+Estilizar con SCSS en React es un poco más complejo que en Vue, al final me siento contento por todo lo que logré. Haber optimizado así la interfaz le da vida al proyecto.
 
 ### Desarrollo continuo
 

@@ -11,6 +11,14 @@
     --secondary-text-color: #26282e;
 }
 
+:root.dark {
+    --background-color: #282828;
+    --primary-focus-color: #bebebe;
+    --secondary-focus-color: #4b4b81;
+    --primary-text-color: #e8e8e8;
+    --secondary-text-color: #282828;
+}
+
 $background-color: var(--background-color);
 $primary-focus-color: var(--primary-focus-color);
 $secondary-focus-color: var(--secondary-focus-color);
