@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useGlobalStates } from '../Context/Context.jsx';
 import styles from '../styles/Navbar.module.scss';
+import logo from '../assets/img/dr-dparkling-logo.svg';
 
 const Navbar = () => {
     const { state, dispatch } = useGlobalStates();
@@ -11,7 +12,7 @@ const Navbar = () => {
         <nav className={styles.nav}>
             <Link to={'/'}>
                 <img
-                    src="/src/assets/img/dr-dparkling-logo.svg"
+                    src={logo}
                     alt="Dr. Sparkling\'s Dental Clinic Logo"
                     style={state.isDark ? { filter: 'invert(100%)' } : { filter: 'none' }}
                 />

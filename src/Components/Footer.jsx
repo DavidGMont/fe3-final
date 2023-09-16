@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/Footer.module.scss';
 import { useGlobalStates } from '../Context/Context.jsx';
+import logo from '../assets/img/dr-dparkling-logo.svg';
 
 const Footer = () => {
     const { state } = useGlobalStates();
@@ -11,7 +12,7 @@ const Footer = () => {
                 <div>
                     <Link to={'/'}>
                         <img
-                            src="/src/assets/img/dr-dparkling-logo.svg"
+                            src={logo}
                             alt="Dr. Sparkling\'s Dental Clinic Logo"
                         />
                     </Link>
