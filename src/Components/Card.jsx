@@ -5,9 +5,15 @@ import { pics } from '../utils/pics.js';
 import styles from '../styles/Card.module.scss';
 
 const Card = ({ dentist }) => {
-    const { dispatch } = useGlobalStates();
+    const { state, dispatch } = useGlobalStates();
+    const favorite = state.favorites.find((dent) => dent.id === dentist.id);
 
-    const handleClick = () => dispatch({ type: 'ADD_FAVORITE', payload: dentist });
+    const addFavorite = () => dispatch({ type: 'ADD_FAVORITE', payload: dentist });
+    const removeFavorite = () => dispatch({ type: 'REMOVE_FAVORITE', payload: dentist.id });
+
+    const handleClick = () => {
+        state.favorites.find((dent) => dent.id === dentist.id) ? removeFavorite() : addFavorite();
+    };
 
     return (
         <article className={styles.card}>
@@ -22,7 +28,7 @@ const Card = ({ dentist }) => {
                 <p>@{dentist.username.toLowerCase()}</p>
             </Link>
             <button onClick={handleClick}>
-                <i className="fa-regular fa-star"></i>
+                <i className={favorite ? 'fa-solid fa-star' : 'fa-regular fa-star'}></i>
             </button>
         </article>
     );
