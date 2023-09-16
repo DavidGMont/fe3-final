@@ -3,6 +3,7 @@ import { URI, useGlobalStates } from '../Context/Context.jsx';
 import { useEffect } from 'react';
 import { pics } from '../utils/pics.js';
 import axios from 'axios';
+import styles from '/src/styles/Detail.module.scss';
 
 const Detail = () => {
     const { state, dispatch } = useGlobalStates();
@@ -20,20 +21,28 @@ const Detail = () => {
     }, [dispatch, id]);
 
     return (
-        <>
-            <h1>Detail Dentist id {state.dentist.id}</h1>
-            {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-            {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+        <article className={styles.detail}>
             <h1>{state.dentist.name}</h1>
-            <img src={pics[id]} alt={state.dentist.name} />
-            <p>📧 Email: {state.dentist.email}</p>
-            <p>📞 Phone: {state.dentist.phone}</p>
+            <p>{pics[id].speciality}</p>
             <p>
+                <i className="fa-solid fa-award"></i> Top #{state.dentist.id}
+            </p>
+            <img src={pics[id].pic} alt={state.dentist.name} />
+            <p>{pics[id].summary}</p>
+            <h2>Book an appointment now!</h2>
+            <p>
+                <i className="fa-solid fa-envelope"></i> Email: {state.dentist.email.toLowerCase()}
+            </p>
+            <p>
+                <i className="fa-solid fa-phone"></i> Phone: {state.dentist.phone}
+            </p>
+            <p>
+                <i className="fa-solid fa-globe"></i>
                 <a href={`https://www.${state.dentist.website}`} target="_blank" rel="noreferrer">
-                    🌐 Website
+                    {` www.${state.dentist.website}`}
                 </a>
             </p>
-        </>
+        </article>
     );
 };
 
