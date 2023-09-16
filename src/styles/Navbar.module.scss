@@ -7,6 +7,12 @@
     align-items: center;
     width: 100%;
 
+    > a {
+        > img {
+            fill: $primary-text-color;
+        }
+    }
+
     > ul {
         display: flex;
         flex-wrap: wrap;
@@ -16,12 +22,38 @@
 
         > li {
             margin-inline: 2rem;
+
+            > a {
+                color: $primary-focus-color;
+                transition: color 0.25s;
+
+                &:hover {
+                    color: $secondary-focus-color;
+                }
+            }
         }
     }
 
-    > button {
-        border: 1px solid $secondary-focus-color;
-        background-color: $background-color;
-        border-radius: 2rem;
+    > span {
+        width: 216px;
+        text-align: right;
+
+        > button {
+            border: 1px solid $secondary-focus-color;
+            background-color: $background-color;
+            border-radius: 2.5rem;
+            transition:
+                color 0.25s,
+                border-color 0.25s;
+
+            &:hover {
+                color: $primary-focus-color;
+                border-color: $primary-focus-color;
+            }
+
+            > i {
+                width: 16px;
+            }
+        }
     }
 }

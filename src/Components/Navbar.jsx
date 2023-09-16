@@ -27,9 +27,15 @@ const Navbar = () => {
                     <Link to={'/favs'}>Favorites</Link>
                 </li>
             </ul>
-            <button title="Toggle color theme" type="button" onClick={handleClick}>
-                Toggle {state.isDark ? 'Dark' : 'Light'}
-            </button>
+            <span>
+                <button title="Toggle color theme" type="button" onClick={handleClick}>
+                    {state.isDark ? (
+                        <i className="fa-regular fa-sun"></i>
+                    ) : (
+                        <i className="fa-regular fa-moon"></i>
+                    )}
+                </button>
+            </span>
         </nav>
     );
 };

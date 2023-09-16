@@ -10,6 +10,14 @@
     align-items: center;
     padding: 2rem;
 
+    > div {
+        a {
+            img {
+                filter: invert(100%);
+            }
+        }
+    }
+
     > nav {
         > p {
             margin-bottom: 1rem;
