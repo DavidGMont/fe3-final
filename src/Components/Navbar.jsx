@@ -15,6 +15,8 @@ const Navbar = () => {
                     src={logo}
                     alt="Dr. Sparkling\'s Dental Clinic Logo"
                     style={state.isDark ? { filter: 'invert(100%)' } : { filter: 'none' }}
+                    width={216}
+                    height={43}
                 />
             </Link>
 

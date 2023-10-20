@@ -1,7 +1,7 @@
 import { useGlobalStates } from '../Context/Context.jsx';
 import Card from '../Components/Card.jsx';
 import styles from '/src/styles/Home.module.scss';
-import cover from '/src/assets/img/cover-c.jpg';
+import cover from '/src/assets/img/cover-c.webp';
 
 const Home = () => {
     const { state } = useGlobalStates();
@@ -17,7 +17,7 @@ const Home = () => {
                     </p>
                     <button type="button">Get Appointment Now</button>
                 </div>
-                <img src={cover} alt="Cover" />
+                <img src={cover} alt="Woman leaning to the right and smiling" width={'60%'} />
             </div>
             <div className={styles.stats}>
                 <article>

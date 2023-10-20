@@ -30,9 +30,11 @@ $andika-bold: url('../../src/assets/fonts/Andika-Bold.ttf');
 @font-face {
     font-family: 'Andika-Regular';
     src: $andika-regular;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Andika-Bold', serif;
     src: $andika-bold;
+    font-display: swap;
 }

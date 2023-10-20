@@ -14,6 +14,8 @@ const Footer = () => {
                         <img
                             src={logo}
                             alt="Dr. Sparkling\'s Dental Clinic Logo"
+                            width={216}
+                            height={43}
                         />
                     </Link>
                     <p>Proper Care, Happy Life</p>
@@ -37,37 +39,37 @@ const Footer = () => {
                     <p>Connect with us!</p>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Contact us through WhatsApp">
                                 <i className="fa-brands fa-whatsapp"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Contact us through email">
                                 <i className="fa-regular fa-envelope"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Visit our LinkedIn page">
                                 <i className="fa-brands fa-linkedin"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Visit our X (Twitter) page">
                                 <i className="fa-brands fa-x-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Visit our TikTok vlog">
                                 <i className="fa-brands fa-tiktok"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Visit our Instagram page">
                                 <i className="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Visit our Facebook page">
                                 <i className="fa-brands fa-facebook"></i>
                             </a>
                         </li>

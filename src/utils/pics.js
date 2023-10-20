@@ -1,13 +1,13 @@
-import D1 from '/src/assets/img/dentists/1.jpg';
-import D2 from '/src/assets/img/dentists/2.jpg';
-import D3 from '/src/assets/img/dentists/3.jpg';
-import D4 from '/src/assets/img/dentists/4.jpg';
-import D5 from '/src/assets/img/dentists/5.jpg';
-import D6 from '/src/assets/img/dentists/6.jpg';
-import D7 from '/src/assets/img/dentists/7.jpg';
-import D8 from '/src/assets/img/dentists/8.jpg';
-import D9 from '/src/assets/img/dentists/9.jpg';
-import D10 from '/src/assets/img/dentists/10.jpg';
+import D1 from '/src/assets/img/dentists/1.webp';
+import D2 from '/src/assets/img/dentists/2.webp';
+import D3 from '/src/assets/img/dentists/3.webp';
+import D4 from '/src/assets/img/dentists/4.webp';
+import D5 from '/src/assets/img/dentists/5.webp';
+import D6 from '/src/assets/img/dentists/6.webp';
+import D7 from '/src/assets/img/dentists/7.webp';
+import D8 from '/src/assets/img/dentists/8.webp';
+import D9 from '/src/assets/img/dentists/9.webp';
+import D10 from '/src/assets/img/dentists/10.webp';
 
 export const pics = {
     1: {

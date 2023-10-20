@@ -18,7 +18,7 @@ const Card = ({ dentist }) => {
     return (
         <article className={styles.card}>
             <Link to={`/dentist/${dentist.id}`}>
-                <img src={pics[dentist.id].pic} alt={dentist.name} />
+                <img src={pics[dentist.id].pic} alt={dentist.name} width={380} height={380} />
                 <h2>{dentist.name}</h2>
                 <p>Specialist in:</p>
                 <p>{pics[dentist.id].speciality}</p>
@@ -27,7 +27,7 @@ const Card = ({ dentist }) => {
                 </p>
                 <p>@{dentist.username.toLowerCase()}</p>
             </Link>
-            <button onClick={handleClick}>
+            <button onClick={handleClick} title="Add dentist to favorites">
                 <i
                     className={favorite ? 'fa-solid fa-star' : 'fa-regular fa-star'}
                     style={state.isDark ? { filter: 'invert(100%)' } : { filter: 'none' }}></i>
